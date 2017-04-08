@@ -1,0 +1,39 @@
+<template name="edit">
+<div class="area">
+    <h4>编辑信息</h4>
+    <form class="form-edit">
+        <div class="form-group">
+             <input type="text" id="bookmark_corpName_new" class="form-control" placeholder="企业名称" value="{{corpName}}">
+        </div>
+        <div class="form-group">
+             <input type="text" id="bookmark_unifiedCode_new" class="form-control" placeholder="统一社会信用编码" value="{{unifiedCode}}">
+        </div>
+        <div class="form-group">
+             <input type="text" id="bookmark_capital_new" class="form-control" placeholder="注册资金（万）" value="{{capital}}">
+        </div>
+        <div class="form-group">
+              <input type="text" id="bookmark_address_new" class="form-control" placeholder="企业住址" value="{{address}}">
+        </div>
+        <div class="form-group">
+               <input type="text" id="bookmark_landlinePhone_new" class="form-control" placeholder="企业联系电话" value="{{landlinePhone}}">
+        </div>
+        <div class="form-group">
+              <input type="text" id="bookmark_legalName_new" class="form-control" placeholder="法定代表人姓名" value="{{legalName}}">
+        </div>
+
+        <div class="form-group">
+             <input type="text" id="bookmark_legalId_new" class="form-control" placeholder="法定代表人身份证" value="{{legalId}}">
+        </div>
+        <div class="form-group">
+               <input type="text" id="bookmark_legalPhone_new" class="form-control" placeholder="法定代表人电话" value="{{legalPhone}}">
+        </div>
+        <div class="form-group">
+              <input type="text" id="bookmark_createdAt_new" class="form-control" placeholder="注册日期" value="{{createdAt}}">
+        </div>
+        <button class="btn btn-primary">保存</button>
+        <button class="btn btn-cancel">取消</button>
+
+    </form>
+</div>
+
+</template>

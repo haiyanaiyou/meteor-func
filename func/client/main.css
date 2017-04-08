@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+.table-responsive {
+    font-size: 12px;
+}
+
+.table-responsive tbody, .table-responsive thead tr th {
+    text-align: center;
+}
+
+.panel-default {
+    margin-left: -30px;
+}
+
+tbody.info{
+    height: 50px;
+    padding: 100px;
+}

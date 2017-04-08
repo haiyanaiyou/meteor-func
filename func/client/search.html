@@ -1,0 +1,73 @@
+<template name='search'>
+    <div class="container ">
+        <div class="page-header clearfix">
+            <h4 class="pull-left">企业</h4>
+             <div class="input-group pull-right col-xs-3">
+              <input type="text" class="form-control" placeholder="Search for..." id="search-result">
+              <span class="input-group-btn">
+                <button class="btn btn-default go" type="button">Go!</button>
+              </span>
+            </div>
+
+        </div>
+        <div class="panel panel-default">
+
+          <div class="panel-heading">企业列表</div>
+
+
+          <table class="table table-responsive">
+
+
+            <thead>
+                <tr>
+                    <th  >企业名称</th>
+                    <th >统一社会信用编码</th>
+                    <th >注册资金（万）</th>
+                    <th >注册地址</th>
+                    <th >企业联系电话</th>
+                    <th >法定代表人姓名</th>
+                    <th >法定代表人身份证</th>
+                    <th >法定代表人电话</th>
+                    <th >注册日期</th>
+                    <th >编辑</th>
+                    <th >删除</th>
+                </tr>
+            </thead>
+            {{#if searching}}
+            .....
+            {{else}}
+            {{#each books}}
+            <tbody>
+                <tr>
+
+                    <td >{{corpName}}</td>
+                    <td >{{unifiedCode}}</td>
+                    <td >{{capital}}</td>
+                    <td >{{address}}</td>
+                    <td >{{landlinePhone}}</td>
+                    <td >{{legalName}}</td>
+                    <td >{{legalId}}</td>
+                    <td >{{legalPhone}}</td>
+                    <td >{{createdAt}}</td>
+                    <td >
+                      <a href="/edit/{{_id}}">
+                        <span class="edit glyphicon glyphicon-pencil " aria-hiden='true'></span>
+                      </a>
+                    </td>
+                    <td ><span class="remove glyphicon glyphicon-trash " aria-hiden='true'></span></td>
+
+
+
+                </tr>
+
+            </tbody>
+
+                {{else}}
+              <tbody class="info">对不起，没有相关  {{query}} 信息</tbody>
+            {{/each}}
+            {{/if}}
+          </table>
+        </div>
+    </div>
+
+</template>
